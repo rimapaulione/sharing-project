@@ -1,6 +1,14 @@
 {
   "HomePage": {
     "title": "Labas pasauli!",
-    "about": "Eiti į apie puslapį"
+    "contact": "Eiti į susisiek puslapį"
+  },
+  "ContactPage": {
+    "title": "Labas susisiek puslapis",
+    "home": "grizti namo"
+  },
+  "meta-home": {
+    "title": "Atiduok",
+    "welcome": "Sveiki"
   }
 }

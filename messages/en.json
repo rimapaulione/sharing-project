@@ -1,6 +1,14 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "about": "Go to the about page"
+    "contact": "Go to the contact page"
+  },
+  "ContactPage": {
+    "title": "Hello contact page",
+    "home": "Back Home"
+  },
+  "meta-home": {
+    "title": "Give away",
+    "welcome": "Welcome"
   }
 }
