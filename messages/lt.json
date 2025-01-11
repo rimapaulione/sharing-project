@@ -7,8 +7,12 @@
     "title": "Labas susisiek puslapis",
     "home": "grizti namo"
   },
-  "meta-home": {
+  "MetaHome": {
     "title": "Atiduok",
     "welcome": "Sveiki"
+  },
+  "LogoComponent": {
+    "alt": "Pasidalink Logotipas",
+    "name": "Pasidalink"
   }
 }

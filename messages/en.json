@@ -7,8 +7,12 @@
     "title": "Hello contact page",
     "home": "Back Home"
   },
-  "meta-home": {
-    "title": "Give away",
+  "MetaHome": {
+    "title": "Sharing App",
     "welcome": "Welcome"
+  },
+  "LogoComponent": {
+    "alt": "Sharing App Logo",
+    "name": "Sharing App"
   }
 }
