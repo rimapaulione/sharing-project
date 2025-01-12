@@ -1,11 +1,12 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "contact": "Go to the contact page"
+    "title": "Home Page"
   },
   "ContactPage": {
-    "title": "Hello contact page",
-    "home": "Back Home"
+    "title": "Contact Page"
+  },
+  "LoginPage": {
+    "title": "Login Page"
   },
   "MetaHome": {
     "title": "Sharing App",

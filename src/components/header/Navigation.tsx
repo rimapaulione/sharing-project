@@ -1,5 +1,6 @@
-import { Languages, Contact, LogIn, LogOut } from "lucide-react";
-import { NavButton } from "@/components/NavButton";
+import { Contact, LogIn, LogOut } from "lucide-react";
+import { NavButton } from "@/components/header/NavButton";
+import { LocaleSwitcher } from "@/components/header/LocaleSwitcher";
 
 export function Navigation() {
   const session = false;
@@ -8,7 +9,7 @@ export function Navigation() {
     <nav className=" bg-muted w-fit p-5 rounded-b-xl mx-">
       <ul className="flex gap-3 items-center justify-center">
         <li>
-          <NavButton href="/about" label="Lt" icon={Languages} />
+          <LocaleSwitcher />
         </li>
         <li>
           <NavButton href="/contact" label="Contact" icon={Contact} />
@@ -16,13 +17,6 @@ export function Navigation() {
 
         {session ? (
           <li>
-            {/* <img
-                    src="/Logo.jpg"
-                    className="h-4 rounded-full"
-                    alt="name"
-                    referrerPolicy="no-referrer"
-                  />
-             */}
             <NavButton href="/login" label="Logout" icon={LogOut} />
           </li>
         ) : (

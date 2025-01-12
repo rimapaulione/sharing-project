@@ -1,11 +1,14 @@
 {
   "HomePage": {
-    "title": "Labas pasauli!",
+    "title": "Namų puslapis",
     "contact": "Eiti į susisiek puslapį"
   },
   "ContactPage": {
-    "title": "Labas susisiek puslapis",
+    "title": "Susisiek puslapis",
     "home": "grizti namo"
+  },
+  "LoginPage": {
+    "title": "Login Puslapis"
   },
   "MetaHome": {
     "title": "Atiduok",
