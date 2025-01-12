@@ -3,7 +3,7 @@
 import { useLocale } from "next-intl";
 import {Locale, usePathname, useRouter, routing} from '@/i18n/routing';
 import { useTransition} from 'react';
-import { useParams } from "next/navigation";
+
 import {
   Select,
   SelectContent,
@@ -17,16 +17,14 @@ export function LocaleSwitcher() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
-  const params = useParams();
 
-  function test(value:Locale){
-    console.log(pathname)
-    console.log(params)
+  function onSelectChange(value:Locale){
+  
     const nextLocale = value 
     startTransition(()=>{
       router.replace(
-        {pathname, params},
-        {locale:nextLocale}
+        { pathname },
+        { locale:nextLocale as Locale}
       )
     })
   }
@@ -34,14 +32,14 @@ export function LocaleSwitcher() {
   return (
     <div className="border border-primary bg-background rounded-md
     ">
-  <Select onValueChange={test}>
+  <Select onValueChange={onSelectChange}>
     <SelectTrigger >
-      <SelectValue placeholder={locale} />
+      <SelectValue placeholder={locale.toUpperCase()} />
     </SelectTrigger>
     <SelectContent>
     {routing.locales.map((cur) => (
         <SelectItem key={cur} value={cur} >
-         {cur}
+         {cur.toUpperCase()}
         </SelectItem>
       ))}
     </SelectContent>

@@ -26,8 +26,5 @@ export const routing = defineRouting({
 });
 
 export type Locale = (typeof routing.locales)[number];
-// export type Routing = Writable<typeof routing.pathnames>;
-// export type RoutePaths = keyof Routing | Routing[keyof Routing][Locale];
-
 export const { Link, redirect, usePathname, useRouter, getPathname } =
   createNavigation(routing);
