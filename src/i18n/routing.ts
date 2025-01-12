@@ -20,7 +20,9 @@ export const routing = defineRouting({
       en: "/login",
       lt: "/prisijungti",
     },
+    
   },
+ 
 });
 
 export type Locale = (typeof routing.locales)[number];
