@@ -1,5 +1,5 @@
 "use client";
-
+import { SearchIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -22,7 +22,7 @@ export function NavSearch() {
        
         className="bg-accent border-accent text-accent-foreground rounded-full text-xl hover:bg-background hover:text-accent size-8 md:size-10"
       >
-        Go
+        <SearchIcon/>
       </Button>
     </div>
   );

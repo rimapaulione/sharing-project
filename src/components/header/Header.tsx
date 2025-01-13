@@ -9,11 +9,9 @@ export function Header() {
         <div className="justify-self-end">
           <Navigation />
         </div>
-
         <div className=" flex flex-col gap-5 text-center sm:flex-row sm:items-center sm:gap-5 md:gap-32 ">
           <div className="justify-items-center">
           <Logo />
-
           </div>
           <div className="shrink w-full">
             <NavSearch/>

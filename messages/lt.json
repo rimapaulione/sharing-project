@@ -17,5 +17,10 @@
   "LogoComponent": {
     "alt": "Pasidalink Logotipas",
     "name": "Pasidalink"
+  },
+  "Navigation": {
+    "contact": "Kontaktai",
+    "login": "Prisijungti",
+    "logout": "Atsijungti"
   }
 }

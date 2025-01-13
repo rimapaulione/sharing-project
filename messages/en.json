@@ -15,5 +15,10 @@
   "LogoComponent": {
     "alt": "Sharing App Logo",
     "name": "Sharing App"
+  },
+  "Navigation": {
+    "contact": "Contact",
+    "login": "Login",
+    "logout": "Logout"
   }
 }

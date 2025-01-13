@@ -18,7 +18,6 @@ export function LocaleSwitcher() {
   const pathname = usePathname();
 
   function onSelectChange(value:Locale){
-  
     const nextLocale = value 
     startTransition(()=>{
       router.replace(
