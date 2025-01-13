@@ -8,7 +8,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-4 ">
       <Image src={logo} height="100" quality={100} width="100" alt={t("alt")} />
-      <span className="hidden sm:block text-2xl font-semibold text-foreground">
+      <span className=" hidden text-xs font-semibold text-foreground md:block md:text-2xl">
         {t("name")}
       </span>
     </Link>

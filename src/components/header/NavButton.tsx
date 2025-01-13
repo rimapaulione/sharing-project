@@ -15,7 +15,7 @@ export function NavButton({
 }: Props & ComponentProps<typeof Link>) {
   return (
     <Button
-      variant={label === "Login" || label === "Logout" ? "default" : "outline"}
+      variant={label === "Login" || label === "Logout" ? "secondary" : "outline"}
       aria-label={label}
       title={label}
       asChild
