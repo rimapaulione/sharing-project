@@ -1,10 +1,14 @@
-import { Contact, LogIn, LogOut } from "lucide-react";
+"use client"
+
+import { Contact, LogIn, LogOut, User } from "lucide-react";
 import { NavButton } from "@/components/header/NavButton";
 import { LocaleSwitcher } from "@/components/header/LocaleSwitcher";
+import { useState } from "react";
 
 
 export function Navigation() {
-  const session = false;
+  const [session, setSession]= useState<string | null>(null)
+
 
 
   return (
@@ -17,13 +21,21 @@ export function Navigation() {
           <NavButton href="/contact" label="contact" icon={Contact} />
         </li>
 
+
         {session ? (
-          <li>
-            <NavButton href="/login" label="logout" icon={LogOut} />
-          </li>
+          <>
+        <li>
+          <NavButton href="/users" label="user" icon={User} />
+        </li>
+
+        <li>
+         <NavButton href="/" label="logout" icon={LogOut} test={()=>{setSession(null)}}/>
+       </li>
+          </>
+     
         ) : (
           <li>
-            <NavButton href="/login" label="login" icon={LogIn} />
+            <NavButton href="/login" label="login" icon={LogIn} test={()=>{setSession("Rima")}}/>
           </li>
         )}
       </ul>

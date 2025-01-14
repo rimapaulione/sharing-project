@@ -1,6 +1,6 @@
 import { defineRouting } from "next-intl/routing";
 import { createNavigation } from "next-intl/navigation";
-//import { Writable } from "utility-types";
+
 
 export const routing = defineRouting({
   // A list of all locales that are supported
@@ -8,10 +8,8 @@ export const routing = defineRouting({
   // Used when no locale matches
   defaultLocale: "en",
   pathnames: {
-    "/": {
-      en: "/",
-      lt: "/",
-    },
+
+    "/": "/",
     "/contact": {
       en: "/contact",
       lt: "/kontaktai",
@@ -20,7 +18,20 @@ export const routing = defineRouting({
       en: "/login",
       lt: "/prisijungti",
     },
-    
+    "/users": {
+      en:"/users",
+      lt: "/users"
+   },
+
+    "/users/profile":{
+       en:"/users/profile",
+      lt: "/users/profile"
+    },
+    "/users/messages": {
+      en: "/users/messages",
+      lt: "/users/messages"
+    },
+
   },
  
 });

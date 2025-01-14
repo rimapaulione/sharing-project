@@ -10,18 +10,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { useParams } from "next/navigation";
 
 export function LocaleSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
+  const params= useParams()
 
   function onSelectChange(value:Locale){
     const nextLocale = value 
     startTransition(()=>{
       router.replace(
-        { pathname },
+        { pathname, params},
         { locale:nextLocale as Locale}
       )
     })

@@ -19,6 +19,15 @@
   "Navigation": {
     "contact": "Contact",
     "login": "Login",
-    "logout": "Logout"
+    "logout": "Logout",
+    "search": "Search...",
+    "user": "User"
+  },
+  "SideNavigation":{
+    "home": "Home",
+    "user": "User",
+    "messages": "Messages"
+
+
   }
 }

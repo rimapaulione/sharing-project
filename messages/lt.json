@@ -21,6 +21,15 @@
   "Navigation": {
     "contact": "Kontaktai",
     "login": "Prisijungti",
-    "logout": "Atsijungti"
+    "logout": "Atsijungti",
+     "search": "Ieškoti...",
+     "user": "Vartotojas"
+  },
+  "SideNavigation":{
+    "home": "Namai",
+    "user": "Vartotojas",
+    "messages": "Žinutės"
+
+
   }
 }
