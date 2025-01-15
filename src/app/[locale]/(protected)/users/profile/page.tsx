@@ -1,9 +1,3 @@
 export default function ProfilePage() {
-    return (
-        <div>
-            User Profile
-        </div>
-    )
+  return <div>User Profile</div>;
 }
-
-
