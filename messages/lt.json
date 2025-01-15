@@ -22,14 +22,16 @@
     "contact": "Kontaktai",
     "login": "Prisijungti",
     "logout": "Atsijungti",
-     "search": "Ieškoti...",
-     "user": "Vartotojas"
+    "search": "Ieškoti...",
+    "user": "Vartotojas"
   },
-  "SideNavigation":{
+  "SideNavigation": {
     "home": "Namai",
     "user": "Vartotojas",
     "messages": "Žinutės"
-
-
+  },
+  "ErrorPage": {
+    "error": " Įvyko klaida",
+    "errorButton": "Bandyti dar kartą"
   }
 }

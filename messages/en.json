@@ -23,11 +23,13 @@
     "search": "Search...",
     "user": "User"
   },
-  "SideNavigation":{
+  "SideNavigation": {
     "home": "Home",
     "user": "User",
     "messages": "Messages"
-
-
+  },
+  "ErrorPage": {
+    "error": "Something went wrong",
+    "errorButton": "Try again"
   }
 }
