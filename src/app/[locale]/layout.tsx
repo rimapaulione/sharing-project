@@ -6,18 +6,16 @@ import { Locale, routing } from "@/i18n/routing";
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: Locale }>;
 };
+type Params = Promise<{ locale: Locale }>;
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const { locale } = await params;
+export async function generateMetadata(props: { params: Params }) {
+  const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: "MetaHome" });
 
   return {

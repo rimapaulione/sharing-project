@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
-type Params = Promise<{ slug: string; locale: Locale }>;
+type Params = Promise<{ locale: Locale }>;
 
 export default function Page(props: { params: Params }) {
   const params = use(props.params);

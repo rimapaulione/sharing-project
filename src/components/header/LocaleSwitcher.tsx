@@ -14,7 +14,7 @@ import {
 export function LocaleSwitcher() {
   const locale = useLocale();
   const router = useRouter();
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
   const pathname = usePathname();
   //const params = useParams();
 
