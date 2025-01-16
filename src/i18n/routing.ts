@@ -1,14 +1,13 @@
 import { defineRouting } from "next-intl/routing";
 import { createNavigation } from "next-intl/navigation";
 
-
 export const routing = defineRouting({
   // A list of all locales that are supported
   locales: ["en", "lt"],
   // Used when no locale matches
   defaultLocale: "en",
-  pathnames: {
 
+  pathnames: {
     "/": "/",
     "/contact": {
       en: "/contact",
@@ -19,21 +18,19 @@ export const routing = defineRouting({
       lt: "/prisijungti",
     },
     "/users": {
-      en:"/users",
-      lt: "/users"
-   },
+      en: "/users",
+      lt: "/users",
+    },
 
-    "/users/profile":{
-       en:"/users/profile",
-      lt: "/users/profile"
+    "/users/profile": {
+      en: "/users/profile",
+      lt: "/users/profile",
     },
     "/users/messages": {
       en: "/users/messages",
-      lt: "/users/messages"
+      lt: "/users/messages",
     },
-
   },
- 
 });
 
 export type Locale = (typeof routing.locales)[number];

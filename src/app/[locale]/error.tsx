@@ -20,9 +20,9 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="flex-none w-fit justify-self-center text-center">
+    <div className="flex-none w-fit justify-self-center text-center flex flex-col gap-4">
       <h2>{t("error")}</h2>
-      <Button className="m-10" size="sm" onClick={() => reset()}>
+      <Button size="sm" onClick={() => reset()}>
         {t("errorButton")}
       </Button>
     </div>

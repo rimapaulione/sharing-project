@@ -31,7 +31,12 @@
     "messages": "Žinutės"
   },
   "ErrorPage": {
-    "error": " Įvyko klaida",
+    "error": " Įvyko klaida!",
     "errorButton": "Bandyti dar kartą"
+  },
+  "NotFoundPage": {
+    "error": "Puslapis nerastas!",
+    "message": "Negalima rasti jūsų ieškomo puslapio.",
+    "errorButton": "Grįžti namo"
   }
 }

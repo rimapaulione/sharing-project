@@ -29,7 +29,12 @@
     "messages": "Messages"
   },
   "ErrorPage": {
-    "error": "Something went wrong",
+    "error": "Something went wrong!",
     "errorButton": "Try again"
+  },
+  "NotFoundPage": {
+    "error": "Not Found!",
+    "message": "Could not find requested resource.",
+    "errorButton": "Return Home"
   }
 }

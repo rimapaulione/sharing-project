@@ -1,11 +1,16 @@
+import { Locale } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function HomePage() {
+type Params = Promise<{ slug: string; locale: Locale }>;
+
+export default function Page(props: { params: Params }) {
+  const params = use(props.params);
+
+  const { locale } = params;
+  setRequestLocale(locale);
   const t = useTranslations("HomePage");
 
-  return (
-    <div>
-      <h1>{t("title")}</h1>
-    </div>
-  );
+  return <div>{t("title")}</div>;
 }

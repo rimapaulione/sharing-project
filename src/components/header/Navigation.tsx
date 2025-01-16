@@ -4,7 +4,7 @@ import { Contact, LogIn, LogOut, User } from "lucide-react";
 import { NavButton } from "@/components/header/NavButton";
 import { LocaleSwitcher } from "@/components/header/LocaleSwitcher";
 import { useState } from "react";
-import { ModeToggle } from "../mode-toggle";
+import { ModeToggle } from "../ModeToggle";
 
 export function Navigation() {
   const [session, setSession] = useState<string | null>(null);

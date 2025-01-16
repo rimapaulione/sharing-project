@@ -1,17 +1,16 @@
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ReactNode } from "react";
+import BaseLayout from "@/components/BaseLayout";
 import { Locale, routing } from "@/i18n/routing";
-import { Josefin_Sans } from "next/font/google";
-import "./globals.css";
 
-import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/header/Header";
-
-const josefin = Josefin_Sans({
-  subsets: ["latin"],
-  display: "swap",
-});
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
+};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
@@ -30,42 +29,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  // Ensure that the incoming `locale` is valid
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
+  // Enable static rendering
+  setRequestLocale(locale);
 
-  const messages = await getMessages();
-
-  return (
-    <html lang={locale}>
-      <body
-        className={`${josefin.className} antialiased bg-background text-background-foreground min-h-screen flex flex-col relative mx-auto `}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Header />
-            <div className="flex-1 py-12 ">
-              <main className=" mx-auto  w-fullsm:max-w-screen-sm  md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
-                {children}
-              </main>
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+  return <BaseLayout locale={locale}>{children}</BaseLayout>;
 }
