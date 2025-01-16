@@ -37,6 +37,7 @@
   "NotFoundPage": {
     "error": "Puslapis nerastas!",
     "message": "Negalima rasti jūsų ieškomo puslapio.",
-    "errorButton": "Grįžti namo"
+    "errorButton": "Grįžti namo",
+    "metadata": "Puslapis nerastas"
   }
 }

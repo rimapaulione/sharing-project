@@ -35,6 +35,7 @@
   "NotFoundPage": {
     "error": "Not Found!",
     "message": "Could not find requested resource.",
-    "errorButton": "Return Home"
+    "errorButton": "Return Home",
+    "metadata": "Page not found"
   }
 }
