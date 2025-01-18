@@ -1,4 +1,14 @@
+import { Params } from "@/lib/types";
 import { SideNavigation } from "../_components/SideNavigation";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata(props: { params: Params }) {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "User" });
+  return {
+    title: `${t("metadata")}`,
+  };
+}
 
 export default function UserLayout({
   children,

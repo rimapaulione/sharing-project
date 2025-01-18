@@ -19,6 +19,9 @@
     "alt": "Pasidalink Logotipas",
     "name": "Pasidalink"
   },
+  "User": {
+    "metadata": "Vartotojas"
+ },
   "Navigation": {
     "contact": "Kontaktai",
     "login": "Prisijungti",

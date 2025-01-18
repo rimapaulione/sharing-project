@@ -16,7 +16,7 @@ export function NavSearch() {
         placeholder={t("search")}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className=" px-3 py-2 rounded-full w-full border-none sm:text-sm md:text-base lg:text-xl focus:outline-none "
+        className=" px-3 py-2 rounded-full w-full border-none sm:text-sm md:text-base lg:text-xl focus:outline-none bg-input"
       />
       <form action={searchAction}>
         <Button

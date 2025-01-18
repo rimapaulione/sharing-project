@@ -18,6 +18,9 @@
     "alt": "Sharing App Logo",
     "name": "Sharing App"
   },
+  "User": {
+    "metadata": "User"
+  },
   "Navigation": {
     "contact": "Contact",
     "login": "Login",
