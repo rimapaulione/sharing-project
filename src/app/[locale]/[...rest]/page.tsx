@@ -1,8 +1,6 @@
-import { Locale } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-
-type Params = Promise<{ locale: Locale }>;
+import type { Params } from "@/lib/types";
 
 export async function generateMetadata(props: { params: Params }) {
   const { locale } = await props.params;

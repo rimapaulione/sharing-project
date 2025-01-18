@@ -1,9 +1,15 @@
-import { Locale } from "@/i18n/routing";
+import { Params } from "@/lib/types";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
-type Params = Promise<{ locale: Locale }>;
+export async function generateMetadata(props: { params: Params }) {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "ContactPage" });
+  return {
+    title: `${t("metadata")}`,
+  };
+}
 
 export default function ContactPage(props: { params: Params }) {
   const params = use(props.params);

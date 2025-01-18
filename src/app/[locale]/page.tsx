@@ -1,15 +1,13 @@
 import { Locale } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
-import { use } from "react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 type Params = Promise<{ locale: Locale }>;
 
-export default function Page(props: { params: Params }) {
-  const params = use(props.params);
-  const { locale } = params;
+export default async function Page({ params }: { params: Params }) {
+  const { locale } = await params;
+
   setRequestLocale(locale);
-  const t = useTranslations("HomePage");
+  const t = await getTranslations("HomePage");
 
   return <div>{t("title")}</div>;
 }

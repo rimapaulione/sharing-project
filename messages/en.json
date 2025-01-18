@@ -3,10 +3,12 @@
     "title": "Home Page"
   },
   "ContactPage": {
-    "title": "Contact Page"
+    "title": "Contact Page",
+    "metadata": "Contact"
   },
   "LoginPage": {
-    "title": "Login Page"
+    "title": "Login Page",
+    "metadata": "Login"
   },
   "MetaHome": {
     "title": "Sharing App",

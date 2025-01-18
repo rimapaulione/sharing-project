@@ -5,10 +5,11 @@
   },
   "ContactPage": {
     "title": "Susisiek puslapis",
-    "home": "grizti namo"
+    "metadata": "Susisiek"
   },
   "LoginPage": {
-    "title": "Login Puslapis"
+    "title": "Login Puslapis",
+    "metadata": "Prisijunk"
   },
   "MetaHome": {
     "title": "Atiduok",

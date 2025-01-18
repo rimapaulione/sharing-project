@@ -3,12 +3,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 import BaseLayout from "@/components/BaseLayout";
 import { Locale, routing } from "@/i18n/routing";
+import type { Params } from "@/lib/types";
 
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: Locale }>;
 };
-type Params = Promise<{ locale: Locale }>;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
