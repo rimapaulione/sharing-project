@@ -1,6 +1,7 @@
 import { Params } from "@/lib/types";
-import { SideNavigation } from "../_components/SideNavigation";
+
 import { getTranslations } from "next-intl/server";
+import { SideNavigation } from "../_components/SideNavigation";
 
 export async function generateMetadata(props: { params: Params }) {
   const { locale } = await props.params;

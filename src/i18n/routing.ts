@@ -13,22 +13,22 @@ export const routing = defineRouting({
       en: "/contact",
       lt: "/kontaktai",
     },
-    "/login": {
+    "/auth/login": {
       en: "/login",
       lt: "/prisijungti",
     },
-    "/users": {
-      en: "/users",
-      lt: "/users",
+    "/account/user": {
+      en: "/account/user",
+      lt: "/account/user",
     },
 
-    "/users/profile": {
-      en: "/users/profile",
-      lt: "/users/profile",
+    "/account/settings": {
+      en: "/account/settings",
+      lt: "/account/settings",
     },
-    "/users/messages": {
-      en: "/users/messages",
-      lt: "/users/messages",
+    "/account/messages": {
+      en: "/account/messages",
+      lt: "/account/messages",
     },
   },
 });

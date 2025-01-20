@@ -22,7 +22,7 @@ export function Navigation() {
         {session ? (
           <>
             <li>
-              <NavButton href="/users" label="user" icon={User} />
+              <NavButton href="/account/user" label="user" icon={User} />
             </li>
 
             <li>
@@ -39,7 +39,7 @@ export function Navigation() {
         ) : (
           <li>
             <NavButton
-              href="/login"
+              href="/auth/login"
               label="login"
               icon={LogIn}
               test={() => {
