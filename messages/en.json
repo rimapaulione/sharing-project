@@ -10,6 +10,10 @@
     "title": "Login Page",
     "metadata": "Login"
   },
+  "RegisterPage": {
+    "title": "Register Page",
+    "metadata": "Register"
+  },
   "MetaHome": {
     "title": "Sharing App",
     "welcome": "Welcome"

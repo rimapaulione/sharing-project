@@ -12,7 +12,12 @@ export function BackButton({
   href,
 }: BackButtonProps & ComponentProps<typeof Link>) {
   return (
-    <Button variant="link" className="font-normal w-full" size="sm" asChild>
+    <Button
+      variant="link"
+      className="font-normal w-full text-sm md:text-base "
+      size="sm"
+      asChild
+    >
       <Link href={href}>{label}</Link>
     </Button>
   );
