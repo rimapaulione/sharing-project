@@ -14,14 +14,17 @@ export const routing = defineRouting({
       lt: "/kontaktai",
     },
     "/auth/login": {
-      en: "/login",
-      lt: "/prisijungti",
+      en: "/auth/login",
+      lt: "/auth/prisijungti",
+    },
+    "/auth/register": {
+      en: "/auth/register",
+      lt: "/auth/register",
     },
     "/account/user": {
       en: "/account/user",
       lt: "/account/user",
     },
-
     "/account/settings": {
       en: "/account/settings",
       lt: "/account/settings",

@@ -1,6 +1,6 @@
 import { Params } from "@/lib/types";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { LoginForm } from "@/app/[locale]/auth/_components/login-form";
 
 export async function generateMetadata(props: { params: Params }) {
   const { locale } = await props.params;
@@ -11,10 +11,9 @@ export async function generateMetadata(props: { params: Params }) {
 }
 
 export default function LoginPage() {
-  const t = useTranslations("LoginPage");
   return (
     <div>
-      <h1>{t("title")}</h1>
+      <LoginForm />
     </div>
   );
 }

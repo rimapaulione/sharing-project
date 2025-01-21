@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ComponentProps } from "react";
 import { useTranslations } from "next-intl";
 
-type Props = {
+type NavButtonProps = {
   icon: LucideIcon;
   label: string;
   test?: () => void;
@@ -15,7 +15,7 @@ export function NavButton({
   label,
   href,
   test,
-}: Props & ComponentProps<typeof Link>) {
+}: NavButtonProps & ComponentProps<typeof Link>) {
   const t = useTranslations("Navigation");
   return (
     <Button

@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 
 @layer base {
@@ -24,7 +25,7 @@ body {
     --accent-foreground: 0 0% 98%;
     --destructive: 0 73% 40%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 91%;
+    --border: 217, 33%, 17%;
     --input: 0 0% 100%;
     --ring: 224 71.4% 4.1%;
     --chart-1: 12 76% 61%;
@@ -45,7 +46,7 @@ body {
     --primary-foreground: 217, 33%, 17%;
     --secondary: 175 79% 26%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 4.8% 95.9%;
+    --muted: 215 37.9% 35.9%;
     --muted-foreground: 217, 33%, 17%;
     --accent: 29 96% 62%;
     --accent-foreground: 0 0% 98%;

@@ -31,7 +31,7 @@ export default async function BaseLayout({ children, locale }: Props) {
           >
             <Header />
             <div className="flex-1 py-12 ">
-              <main className=" mx-auto w-fullsm:max-w-screen-sm  md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+              <main className="mx-auto w-full sm:max-w-screen-sm  md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
                 {children}
               </main>
             </div>
