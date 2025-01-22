@@ -11,9 +11,5 @@ export async function generateMetadata(props: { params: Params }) {
 }
 
 export default function LoginPage() {
-  return (
-    <div>
-      <LoginForm />
-    </div>
-  );
+  return <LoginForm />;
 }

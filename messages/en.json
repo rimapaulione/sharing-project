@@ -1,4 +1,12 @@
 {
+  "MetaHome": {
+    "title": "Sharing App",
+    "welcome": "Welcome"
+  },
+  "LogoComponent": {
+    "alt": "Sharing App Logo",
+    "name": "Sharing App"
+  },
   "HomePage": {
     "title": "Home Page"
   },
@@ -7,20 +15,16 @@
     "metadata": "Contact"
   },
   "LoginPage": {
-    "title": "Login Page",
+    "headerLabel": "Login",
+    "backButtonLabel": "Don't have an account?",
+    "emailFormLabel": "Email",
+    "passwordFormLabel": "Password",
+    "submit": "Login",
     "metadata": "Login"
   },
   "RegisterPage": {
     "title": "Register Page",
     "metadata": "Register"
-  },
-  "MetaHome": {
-    "title": "Sharing App",
-    "welcome": "Welcome"
-  },
-  "LogoComponent": {
-    "alt": "Sharing App Logo",
-    "name": "Sharing App"
   },
   "User": {
     "metadata": "User"

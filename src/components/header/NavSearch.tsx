@@ -10,13 +10,13 @@ export function NavSearch() {
   const t = useTranslations("Navigation");
 
   return (
-    <div className="flex border border-foreground px-1 rounded-full w-full items-center justify-center md:px-3 md:py-1">
+    <div className="flex border border-foreground px-1  bg-background rounded-full w-full items-center justify-center md:px-3 md:py-1">
       <input
         type="text"
         placeholder={t("search")}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className=" px-3 py-2 rounded-full w-full border-none sm:text-sm md:text-base lg:text-xl focus:outline-none bg-input"
+        className=" px-3 py-2 rounded-full bg-background w-full border-none sm:text-sm md:text-base lg:text-xl focus:outline-none "
       />
       <form action={searchAction}>
         <Button

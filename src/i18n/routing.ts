@@ -19,15 +19,15 @@ export const routing = defineRouting({
     },
     "/auth/register": {
       en: "/auth/register",
-      lt: "/auth/register",
+      lt: "/auth/registruotis",
     },
     "/account/user": {
       en: "/account/user",
-      lt: "/account/user",
+      lt: "/account/vartotojas",
     },
     "/account/settings": {
       en: "/account/settings",
-      lt: "/account/settings",
+      lt: "/account/nustatymai",
     },
     "/account/messages": {
       en: "/account/messages",

@@ -1,27 +1,35 @@
 {
-  "HomePage": {
-    "title": "Namų puslapis",
-    "contact": "Eiti į susisiek puslapį"
-  },
-  "ContactPage": {
-    "title": "Susisiek puslapis",
-    "metadata": "Susisiek"
-  },
-  "LoginPage": {
-    "title": "Login Puslapis",
-    "metadata": "Prisijunk"
-  },
   "MetaHome": {
-    "title": "Atiduok",
+    "title": "Pasidalink",
     "welcome": "Sveiki"
   },
   "LogoComponent": {
-    "alt": "Pasidalink Logotipas",
+    "alt": "Pasidalink Logo",
     "name": "Pasidalink"
+  },
+  "HomePage": {
+    "title": "Namų Puslapis"
+  },
+  "ContactPage": {
+    "title": "Susisiek Puslapis",
+    "metadata": "Susisiek"
+  },
+  "LoginPage": {
+    "headerLabel": "Prisijungti",
+    "backButtonLabel": "Neturite paskyros? Registruotis",
+    "emailFormLabel": "El. paštas",
+
+    "passwordFormLabel": "Slaptažodis",
+    "submit": "Prisijungti",
+    "metadata": "Prisijungti"
+  },
+  "RegisterPage": {
+    "title": "Registruokis puslapis",
+    "metadata": "Registruokis"
   },
   "User": {
     "metadata": "Vartotojas"
- },
+  },
   "Navigation": {
     "contact": "Kontaktai",
     "login": "Prisijungti",
@@ -35,12 +43,12 @@
     "messages": "Žinutės"
   },
   "ErrorPage": {
-    "error": " Įvyko klaida!",
+    "error": "Įvyko laida!",
     "errorButton": "Bandyti dar kartą"
   },
   "NotFoundPage": {
     "error": "Puslapis nerastas!",
-    "message": "Negalima rasti jūsų ieškomo puslapio.",
+    "message": "Negalima rasti ieškomo puslapio.",
     "errorButton": "Grįžti namo",
     "metadata": "Puslapis nerastas"
   }

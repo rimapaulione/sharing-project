@@ -24,7 +24,7 @@ export function SideNavButton({
       aria-label={label}
       title={label}
       asChild
-      className={` justify-start ${pathname === href ? "bg-muted text-gray-800 " : ""}`}
+      className={` justify-start ${pathname === href ? "bg-muted  " : ""}`}
     >
       <Link href={href} key={label} className="py-3 px-5 flex w-full gap-4 ">
         <span className="justify-self-start ">

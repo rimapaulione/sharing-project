@@ -1,7 +1,5 @@
-import { Locale } from "@/i18n/routing";
+import { Params } from "@/lib/types";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-
-type Params = Promise<{ locale: Locale }>;
 
 export default async function Page({ params }: { params: Params }) {
   const { locale } = await params;
