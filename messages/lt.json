@@ -25,8 +25,19 @@
     "metadata": "Prisijungti"
   },
   "RegisterPage": {
-    "title": "Registruokis puslapis",
-    "metadata": "Registruokis"
+    "headerLabel": "Registruotis",
+    "backButtonLabel": "Jau turi paskyrą? Prisijungti",
+    "emailFormLabel": "El. paštas",
+    "emailRequired": "Reikalingas el. pašto adresas",
+    "passwordFormLabel": "Slaptažodis",
+    "passwordRequired": "Reikalingas slaptažodis",
+    "confirmPasswordLabel": "Pakartoti slaptažodį",
+    "nameLabel": "Vardas",
+    "nameRequired": "Reikalingas vardas",
+    "lastNameLabel": "Pavardė",
+    "lastNameRequired": "Reikalinga pavardė",
+    "submit": "Registruotis",
+    "metadata": "Registruotis"
   },
   "User": {
     "metadata": "Vartotojas"

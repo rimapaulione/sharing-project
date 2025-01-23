@@ -25,7 +25,18 @@
     "metadata": "Login"
   },
   "RegisterPage": {
-    "title": "Register Page",
+    "headerLabel": "Create an account",
+    "backButtonLabel": "Already have an account?",
+    "emailFormLabel": "Email",
+    "emailRequired": "Email is required",
+    "passwordFormLabel": "Password",
+    "passwordRequired": "Password is required",
+    "confirmPasswordLabel": "Confirm Password",
+    "nameLabel": "Name",
+    "nameRequired": "Name is required",
+    "lastNameLabel": "Last name",
+    "lastNameRequired": "Last name is required",
+    "submit": "Create an account",
     "metadata": "Register"
   },
   "User": {

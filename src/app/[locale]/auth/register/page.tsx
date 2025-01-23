@@ -1,5 +1,6 @@
 import { Params } from "@/lib/types";
 import { getTranslations } from "next-intl/server";
+import { RegisterForm } from "../_components/register-form";
 
 export async function generateMetadata(props: { params: Params }) {
   const { locale } = await props.params;
@@ -10,5 +11,5 @@ export async function generateMetadata(props: { params: Params }) {
 }
 
 export default function RegisterPage() {
-  return <div>Register form, need to create</div>;
+  return <RegisterForm />;
 }
