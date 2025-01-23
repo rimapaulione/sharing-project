@@ -2,8 +2,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Josefin_Sans } from "next/font/google";
 import { ReactNode } from "react";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { Header } from "@/components/header/Header";
+import { ThemeProvider } from "@/components/themeProvider";
+import { Header } from "@/components/header/header";
 
 type Props = {
   children: ReactNode;
@@ -15,7 +15,7 @@ const josefin = Josefin_Sans({
   display: "swap",
 });
 
-export default async function BaseLayout({ children, locale }: Props) {
+export async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages();
   return (
     <html lang={locale}>

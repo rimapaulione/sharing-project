@@ -1,7 +1,7 @@
 "use client";
 
 import { Home, User, MessageCircle } from "lucide-react";
-import { SideNavButton } from "@/app/[locale]/(protected)/_components/SideNavButton";
+import { SideNavButton } from "@/app/[locale]/(protected)/_components/sideNavButton";
 
 export function SideNavigation() {
   return (

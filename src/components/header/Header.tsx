@@ -1,6 +1,6 @@
-import { Logo } from "@/components/header/Logo";
-import { Navigation } from "@/components/header/Navigation";
-import { NavSearch } from "@/components/header/NavSearch";
+import { Logo } from "./logo";
+import { Navigation } from "./navigation";
+import { NavSearch } from "./navSearch";
 
 export function Header() {
   return (

@@ -18,8 +18,9 @@
     "headerLabel": "Prisijungti",
     "backButtonLabel": "Neturite paskyros? Registruotis",
     "emailFormLabel": "El. paštas",
-
+    "emailRequired": "Reikalingas el. pašto adresas",
     "passwordFormLabel": "Slaptažodis",
+    "passwordRequired": "Reikalingas slaptažodis",
     "submit": "Prisijungti",
     "metadata": "Prisijungti"
   },

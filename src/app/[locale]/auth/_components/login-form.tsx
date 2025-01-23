@@ -3,7 +3,6 @@
 import { CardWrapper } from "@/app/[locale]/auth/_components/card-wrapper";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
-import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
@@ -15,28 +14,23 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
-const LoginSchema = z.object({
-  email: z
-    .string()
-    .trim()
-    .min(1, { message: "Email required!" })
-    .email({ message: "Email is required" }),
-  password: z.string().trim().min(1, { message: "Password is required" }),
-});
+import { getLoginSchema, LoginFormSchema } from "@/lib/schemas";
+import { useRouter } from "@/i18n/routing";
 
 export function LoginForm() {
   const t = useTranslations("LoginPage");
-  const form = useForm<z.infer<typeof LoginSchema>>({
-    resolver: zodResolver(LoginSchema),
+  const router = useRouter();
+  const form = useForm<LoginFormSchema>({
+    resolver: zodResolver(getLoginSchema(t)),
     defaultValues: {
       email: "",
       password: "",
     },
   });
 
-  const submitHandler = (value: z.infer<typeof LoginSchema>) => {
+  const submitHandler = (value: LoginFormSchema) => {
     console.log(value);
+    router.push("/account/user");
   };
   return (
     <CardWrapper

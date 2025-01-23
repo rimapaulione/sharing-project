@@ -5,7 +5,7 @@ import { use } from "react";
 
 export async function generateMetadata(props: { params: Params }) {
   const { locale } = await props.params;
-  const t = await getTranslations({ locale, namespace: "ContactPage" });
+  const t = await getTranslations({ locale, namespace: "LoginPage" });
   return {
     title: `${t("metadata")}`,
   };

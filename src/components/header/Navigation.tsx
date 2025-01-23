@@ -1,13 +1,12 @@
 "use client";
 
 import { Contact, LogIn, LogOut, User } from "lucide-react";
-import { NavButton } from "@/components/header/NavButton";
-import { LocaleSwitcher } from "@/components/header/LocaleSwitcher";
-import { useState } from "react";
-import { ModeToggle } from "../ModeToggle";
+import { LocaleSwitcher } from "./localeSwitcher";
+import { NavButton } from "./navButton";
+import { ModeToggle } from "../modeToggle";
 
 export function Navigation() {
-  const [session, setSession] = useState<string | null>(null);
+  const session = "";
 
   return (
     <nav className=" bg-muted w-fit p-5 rounded-b-xl mx-">
@@ -26,26 +25,12 @@ export function Navigation() {
             </li>
 
             <li>
-              <NavButton
-                href="/"
-                label="logout"
-                icon={LogOut}
-                test={() => {
-                  setSession(null);
-                }}
-              />
+              <NavButton href="/" label="logout" icon={LogOut} />
             </li>
           </>
         ) : (
           <li>
-            <NavButton
-              href="/auth/login"
-              label="login"
-              icon={LogIn}
-              test={() => {
-                setSession("Rima");
-              }}
-            />
+            <NavButton href="/auth/login" label="login" icon={LogIn} />
           </li>
         )}
         <li>

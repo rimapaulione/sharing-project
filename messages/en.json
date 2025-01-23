@@ -18,7 +18,9 @@
     "headerLabel": "Login",
     "backButtonLabel": "Don't have an account?",
     "emailFormLabel": "Email",
+    "emailRequired": "Email is required",
     "passwordFormLabel": "Password",
+    "passwordRequired": "Password is required",
     "submit": "Login",
     "metadata": "Login"
   },
