@@ -32,6 +32,7 @@
     "passwordFormLabel": "Slaptažodis",
     "passwordRequired": "Reikalingas slaptažodis",
     "confirmPasswordLabel": "Pakartoti slaptažodį",
+    "minPasswordRequired": "Slaptažodis turi būti bent 6 simbolių!",
     "nameLabel": "Vardas",
     "nameRequired": "Reikalingas vardas",
     "lastNameLabel": "Pavardė",

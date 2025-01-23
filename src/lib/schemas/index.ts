@@ -34,7 +34,11 @@ export function getRegisterSchema(t?: (key: string) => string) {
       .string()
       .trim()
       .min(1, { message: t ? t("passwordRequired") : "Password is required" })
-      .min(6, { message: "Password must have at least 6 characters!" }),
+      .min(6, {
+        message: t
+          ? t("minPasswordRequired")
+          : "Password must have at least 6 characters!",
+      }),
     confirmPassword: z
       .string()
       .trim()

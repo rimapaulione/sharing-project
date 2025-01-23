@@ -23,8 +23,11 @@ export function RegisterForm() {
   const form = useForm<RegisterFormSchema>({
     resolver: zodResolver(getRegisterSchema(t)),
     defaultValues: {
+      firstname: "",
+      lastname: "",
       email: "",
       password: "",
+      confirmPassword: "",
     },
   });
 
@@ -46,8 +49,8 @@ export function RegisterForm() {
               control={form.control}
               name="firstname"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="px-2 sm:text-sm md:text-base lg:text-xl">
+                <FormItem className="px-2">
+                  <FormLabel className=" sm:text-sm md:text-base lg:text-xl">
                     {t("nameLabel")}
                   </FormLabel>
                   <FormControl>
@@ -61,8 +64,8 @@ export function RegisterForm() {
               control={form.control}
               name="lastname"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="px-2 sm:text-sm md:text-base lg:text-xl">
+                <FormItem className="px-2">
+                  <FormLabel className="sm:text-sm md:text-base lg:text-xl">
                     {t("lastNameLabel")}
                   </FormLabel>
                   <FormControl>
@@ -76,8 +79,8 @@ export function RegisterForm() {
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="px-2 sm:text-sm md:text-base lg:text-xl">
+                <FormItem className="px-2">
+                  <FormLabel className="sm:text-sm md:text-base lg:text-xl">
                     {t("emailFormLabel")}
                   </FormLabel>
                   <FormControl>
@@ -92,8 +95,8 @@ export function RegisterForm() {
               control={form.control}
               name="password"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="px-2 sm:text-sm md:text-base lg:text-xl">
+                <FormItem className="px-2">
+                  <FormLabel className="sm:text-sm md:text-base lg:text-xl">
                     {t("passwordFormLabel")}
                   </FormLabel>
                   <FormControl>
@@ -107,8 +110,8 @@ export function RegisterForm() {
               control={form.control}
               name="confirmPassword"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="px-2 sm:text-sm md:text-base lg:text-xl">
+                <FormItem className="px-2">
+                  <FormLabel className="sm:text-sm md:text-base lg:text-xl">
                     {t("confirmPasswordLabel")}
                   </FormLabel>
                   <FormControl>

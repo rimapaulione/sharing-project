@@ -31,6 +31,7 @@
     "emailRequired": "Email is required",
     "passwordFormLabel": "Password",
     "passwordRequired": "Password is required",
+    "minPasswordRequired": "Password must have at least 6 characters!",
     "confirmPasswordLabel": "Confirm Password",
     "nameLabel": "Name",
     "nameRequired": "Name is required",
