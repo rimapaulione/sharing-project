@@ -35,8 +35,8 @@
     "minPasswordRequired": "Slaptažodis turi būti bent 6 simbolių!",
     "nameLabel": "Vardas",
     "nameRequired": "Reikalingas vardas",
-    "lastNameLabel": "Pavardė",
-    "lastNameRequired": "Reikalinga pavardė",
+    "cityLabel": "Miestas",
+    "cityRequired": "Reikalingas miestas",
     "submit": "Registruotis",
     "metadata": "Registruotis"
   },

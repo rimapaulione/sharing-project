@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "@/i18n/routing";
 import { getRegisterSchema, RegisterFormSchema } from "@/lib/schemas";
+import CheckBox from "./check-box";
 
 export function RegisterForm() {
   const t = useTranslations("RegisterPage");
@@ -24,7 +25,7 @@ export function RegisterForm() {
     resolver: zodResolver(getRegisterSchema(t)),
     defaultValues: {
       firstname: "",
-      lastname: "",
+      city: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -62,11 +63,11 @@ export function RegisterForm() {
             />
             <FormField
               control={form.control}
-              name="lastname"
+              name="city"
               render={({ field }) => (
                 <FormItem className="px-2">
                   <FormLabel className="sm:text-sm md:text-base lg:text-xl">
-                    {t("lastNameLabel")}
+                    {t("cityLabel")}
                   </FormLabel>
                   <FormControl>
                     <Input {...field} type="text" />
@@ -122,7 +123,22 @@ export function RegisterForm() {
               )}
             />
           </div>
-
+          <FormField
+            control={form.control}
+            name="confirmPassword"
+            render={({ field }) => (
+              <FormItem className="px-2">
+                <FormLabel className="sm:text-sm md:text-base lg:text-xl">
+                  {t("confirmPasswordLabel")}
+                </FormLabel>
+                <FormControl>
+                  <Input {...field} type="password" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <CheckBox />
           <Button variant="secondary" className="w-full">
             {t("submit")}
           </Button>

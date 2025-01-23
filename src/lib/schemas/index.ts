@@ -22,10 +22,10 @@ export function getRegisterSchema(t?: (key: string) => string) {
       .string()
       .trim()
       .min(1, { message: t ? t("nameRequired") : "Name is required" }),
-    lastname: z
+    city: z
       .string()
       .trim()
-      .min(1, { message: t ? t("lastNameRequired") : "Last name is required" }),
+      .min(1, { message: t ? t("cityRequired") : "City is required" }),
     email: z
       .string()
       .trim()

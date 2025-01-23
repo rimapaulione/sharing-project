@@ -35,8 +35,8 @@
     "confirmPasswordLabel": "Confirm Password",
     "nameLabel": "Name",
     "nameRequired": "Name is required",
-    "lastNameLabel": "Last name",
-    "lastNameRequired": "Last name is required",
+    "cityLabel": "City",
+    "cityRequired": "City is required",
     "submit": "Create an account",
     "metadata": "Register"
   },
