@@ -14,9 +14,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "@/i18n/routing";
+import { Link, useRouter } from "@/i18n/routing";
 import { getRegisterSchema, RegisterFormSchema } from "@/lib/schemas";
-import CheckBox from "./check-box";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export function RegisterForm() {
   const t = useTranslations("RegisterPage");
@@ -29,6 +29,7 @@ export function RegisterForm() {
       email: "",
       password: "",
       confirmPassword: "",
+      checkBox: false,
     },
   });
 
@@ -125,20 +126,33 @@ export function RegisterForm() {
           </div>
           <FormField
             control={form.control}
-            name="confirmPassword"
+            name="checkBox"
             render={({ field }) => (
               <FormItem className="px-2">
-                <FormLabel className="sm:text-sm md:text-base lg:text-xl">
-                  {t("confirmPasswordLabel")}
-                </FormLabel>
                 <FormControl>
-                  <Input {...field} type="password" />
+                  <div className="flex items-center space-x-2">
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={(checked) =>
+                        field.onChange(checked === true)
+                      }
+                      id="terms"
+                    />
+                    <div className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      <label htmlFor="terms">{t("checkBoxLabel")}</label>{" "}
+                      <Link href="/" className="text-secondary underline">
+                        {" "}
+                        {t("checkBoxLink")}
+                      </Link>
+                    </div>
+                  </div>
                 </FormControl>
+
                 <FormMessage />
               </FormItem>
             )}
           />
-          <CheckBox />
+
           <Button variant="secondary" className="w-full">
             {t("submit")}
           </Button>
