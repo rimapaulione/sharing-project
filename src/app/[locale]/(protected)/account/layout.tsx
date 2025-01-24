@@ -1,6 +1,6 @@
+import { SideNavigation } from "@/components/protected/sideNavigation";
 import { Params } from "@/lib/types";
 import { getTranslations } from "next-intl/server";
-import { SideNavigation } from "@/app/[locale]/(protected)/_components/sideNavigation";
 
 export async function generateMetadata(props: { params: Params }) {
   const { locale } = await props.params;

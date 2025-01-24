@@ -1,6 +1,6 @@
 "use client";
 
-import { CardWrapper } from "@/app/[locale]/auth/_components/card-wrapper";
+import { CardWrapper } from "@/components/auth/card-wrapper";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,6 +16,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { getLoginSchema, LoginFormSchema } from "@/lib/schemas";
 import { useRouter } from "@/i18n/routing";
+import { FormSuccess } from "@/components/form-success";
+import { FormError } from "@/components/form-error";
 
 export function LoginForm() {
   const t = useTranslations("LoginPage");
@@ -73,6 +75,8 @@ export function LoginForm() {
               )}
             />
           </div>
+          <FormSuccess message="" />
+          <FormError message="" />
           <Button variant="secondary" className="w-full">
             {t("submit")}
           </Button>

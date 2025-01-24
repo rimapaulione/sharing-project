@@ -6,8 +6,8 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import { Header } from "@/app/[locale]/auth/_components/header";
-import { BackButton } from "@/app/[locale]/auth/_components/back-button";
+import { Header } from "@/components/auth/header";
+import { BackButton } from "@/components/auth/back-button";
 import { ComponentProps } from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";

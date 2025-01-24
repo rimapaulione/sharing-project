@@ -1,8 +1,8 @@
 "use client";
-
-import { CardWrapper } from "@/app/[locale]/auth/_components/card-wrapper";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
+import { useRouter } from "@/i18n/routing";
+import { getRegisterSchema, RegisterFormSchema } from "@/lib/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
@@ -14,9 +14,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "@/i18n/routing";
-import { getRegisterSchema, RegisterFormSchema } from "@/lib/schemas";
-import { CheckboxWithLabel } from "./check-box";
+import { CheckboxWithLabel } from "@/components/auth/check-box";
+import { CardWrapper } from "@/components/auth/card-wrapper";
+import { FormSuccess } from "@/components/form-success";
+import { FormError } from "@/components/form-error";
 
 export function RegisterForm() {
   const t = useTranslations("RegisterPage");
@@ -143,7 +144,8 @@ export function RegisterForm() {
               </FormItem>
             )}
           />
-
+          <FormSuccess message="" />
+          <FormError message="" />
           <Button variant="secondary" className="w-full">
             {t("submit")}
           </Button>
