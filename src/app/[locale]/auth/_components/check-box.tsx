@@ -1,6 +1,5 @@
 import { Checkbox } from "@/components/ui/checkbox";
-import Link from "next/link";
-
+import { Link } from "@/i18n/routing";
 type CheckboxWithLabelProps = {
   id: string;
   label: string;
