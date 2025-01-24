@@ -13,6 +13,7 @@ export const routing = defineRouting({
       en: "/contact",
       lt: "/kontaktai",
     },
+    "/terms": "/terms",
     "/auth/login": {
       en: "/auth/login",
       lt: "/auth/prisijungti",

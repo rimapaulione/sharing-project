@@ -14,9 +14,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Link, useRouter } from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
 import { getRegisterSchema, RegisterFormSchema } from "@/lib/schemas";
-import { Checkbox } from "@/components/ui/checkbox";
+import { CheckboxWithLabel } from "./check-box";
 
 export function RegisterForm() {
   const t = useTranslations("RegisterPage");
@@ -130,24 +130,15 @@ export function RegisterForm() {
             render={({ field }) => (
               <FormItem className="px-2">
                 <FormControl>
-                  <div className="flex items-center space-x-2">
-                    <Checkbox
-                      checked={field.value}
-                      onCheckedChange={(checked) =>
-                        field.onChange(checked === true)
-                      }
-                      id="terms"
-                    />
-                    <div className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                      <label htmlFor="terms">{t("checkBoxLabel")}</label>{" "}
-                      <Link href="/" className="text-secondary underline">
-                        {" "}
-                        {t("checkBoxLink")}
-                      </Link>
-                    </div>
-                  </div>
+                  <CheckboxWithLabel
+                    id="terms"
+                    label={t("checkBoxLabel")}
+                    linkText={t("checkBoxLink")}
+                    linkHref="/terms"
+                    value={field.value}
+                    onChange={field.onChange}
+                  />
                 </FormControl>
-
                 <FormMessage />
               </FormItem>
             )}
