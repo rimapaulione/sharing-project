@@ -41,9 +41,10 @@ export function LoginForm() {
     setSuccess("");
     startTransition(async () => {
       const loginAnswer = await login(values);
-      setError(loginAnswer.error);
-      setSuccess(loginAnswer.success);
-      router.push("/account/user");
+      if (loginAnswer.success) {
+        setSuccess(loginAnswer.success);
+        router.push("/account/user");
+      } else setError(loginAnswer.error);
     });
   };
   return (

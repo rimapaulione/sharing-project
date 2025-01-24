@@ -44,9 +44,10 @@ export function RegisterForm() {
     setSuccess("");
     startTransition(async () => {
       const registerAnswer = await register(values);
-      setError(registerAnswer.error);
-      setSuccess(registerAnswer.success);
-      router.push("/auth/login");
+      if (registerAnswer.success) {
+        setSuccess(registerAnswer.success);
+        router.push("/auth/login");
+      } else setError(registerAnswer.error);
     });
   };
   return (
