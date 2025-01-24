@@ -18,8 +18,13 @@ import { CheckboxWithLabel } from "@/components/auth/check-box";
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { FormSuccess } from "@/components/form-success";
 import { FormError } from "@/components/form-error";
+import { useState, useTransition } from "react";
+import { register } from "@/actions/register";
 
 export function RegisterForm() {
+  const [error, setError] = useState<string | undefined>("");
+  const [success, setSuccess] = useState<string | undefined>("");
+  const [isPending, startTransition] = useTransition();
   const t = useTranslations("RegisterPage");
   const router = useRouter();
   const form = useForm<RegisterFormSchema>({
@@ -34,9 +39,15 @@ export function RegisterForm() {
     },
   });
 
-  const submitHandler = (value: RegisterFormSchema) => {
-    console.log(value);
-    router.push("/auth/login");
+  const submitHandler = (values: RegisterFormSchema) => {
+    setError("");
+    setSuccess("");
+    startTransition(async () => {
+      const registerAnswer = await register(values);
+      setError(registerAnswer.error);
+      setSuccess(registerAnswer.success);
+      router.push("/auth/login");
+    });
   };
   return (
     <CardWrapper
@@ -57,7 +68,7 @@ export function RegisterForm() {
                     {t("nameLabel")}
                   </FormLabel>
                   <FormControl>
-                    <Input {...field} type="text" />
+                    <Input {...field} type="text" disabled={isPending} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -72,7 +83,7 @@ export function RegisterForm() {
                     {t("cityLabel")}
                   </FormLabel>
                   <FormControl>
-                    <Input {...field} type="text" />
+                    <Input {...field} type="text" disabled={isPending} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -87,7 +98,7 @@ export function RegisterForm() {
                     {t("emailFormLabel")}
                   </FormLabel>
                   <FormControl>
-                    <Input {...field} type="email" />
+                    <Input {...field} type="email" disabled={isPending} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -103,7 +114,7 @@ export function RegisterForm() {
                     {t("passwordFormLabel")}
                   </FormLabel>
                   <FormControl>
-                    <Input {...field} type="password" />
+                    <Input {...field} type="password" disabled={isPending} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -118,7 +129,7 @@ export function RegisterForm() {
                     {t("confirmPasswordLabel")}
                   </FormLabel>
                   <FormControl>
-                    <Input {...field} type="password" />
+                    <Input {...field} type="password" disabled={isPending} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -138,15 +149,16 @@ export function RegisterForm() {
                     href="/terms"
                     value={field.value}
                     onChange={field.onChange}
+                    disabled={isPending}
                   />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <FormSuccess message="" />
-          <FormError message="" />
-          <Button variant="secondary" className="w-full">
+          <FormSuccess message={success} />
+          <FormError message={error} />
+          <Button variant="secondary" className="w-full" disabled={isPending}>
             {t("submit")}
           </Button>
         </form>

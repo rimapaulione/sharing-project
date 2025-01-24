@@ -16,6 +16,8 @@ export type LoginFormSchema = z.infer<
   Awaited<ReturnType<typeof getLoginSchema>>
 >;
 
+export const LoginSchema = await getLoginSchema();
+
 export function getRegisterSchema(t?: (key: string) => string) {
   return z
     .object({
@@ -61,3 +63,4 @@ export function getRegisterSchema(t?: (key: string) => string) {
 export type RegisterFormSchema = z.infer<
   Awaited<ReturnType<typeof getRegisterSchema>>
 >;
+export const RegisterSchema = await getRegisterSchema();

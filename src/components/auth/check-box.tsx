@@ -8,6 +8,7 @@ type CheckboxWithLabelProps = {
   href: string;
   value: boolean;
   onChange: (checked: boolean) => void;
+  disabled: boolean;
 };
 
 export function CheckboxWithLabel({
@@ -17,6 +18,7 @@ export function CheckboxWithLabel({
   href,
   value,
   onChange,
+  disabled,
 }: CheckboxWithLabelProps & ComponentProps<typeof Link>) {
   return (
     <div className="flex items-center space-x-2">
@@ -24,6 +26,7 @@ export function CheckboxWithLabel({
         checked={value}
         onCheckedChange={(checked) => onChange(checked === true)}
         id={id}
+        disabled={disabled}
       />
       <div className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
         <label htmlFor={id}>{label}</label>{" "}
