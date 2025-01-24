@@ -1,10 +1,11 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Link } from "@/i18n/routing";
+import { ComponentProps } from "react";
 type CheckboxWithLabelProps = {
   id: string;
   label: string;
   linkText: string;
-  linkHref: string;
+  href: string;
   value: boolean;
   onChange: (checked: boolean) => void;
 };
@@ -13,10 +14,10 @@ export function CheckboxWithLabel({
   id,
   label,
   linkText,
-  linkHref,
+  href,
   value,
   onChange,
-}: CheckboxWithLabelProps) {
+}: CheckboxWithLabelProps & ComponentProps<typeof Link>) {
   return (
     <div className="flex items-center space-x-2">
       <Checkbox
@@ -26,7 +27,7 @@ export function CheckboxWithLabel({
       />
       <div className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
         <label htmlFor={id}>{label}</label>{" "}
-        <Link href={linkHref} className="text-secondary underline">
+        <Link href={href} className="text-secondary underline">
           {linkText}
         </Link>
       </div>

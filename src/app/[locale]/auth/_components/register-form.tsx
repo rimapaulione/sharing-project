@@ -134,7 +134,7 @@ export function RegisterForm() {
                     id="terms"
                     label={t("checkBoxLabel")}
                     linkText={t("checkBoxLink")}
-                    linkHref="/terms"
+                    href="/terms"
                     value={field.value}
                     onChange={field.onChange}
                   />
