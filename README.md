@@ -12,13 +12,14 @@ To achieve this, the project integrates Sharing-Project-Java with a real databas
 ✅ Multi-language support for broader accessibility
 ✅ Learning & experimenting with new technologies
 
-This project is a work in progress, and I'm excited to keep improving it! 🚀✨
+This project is a work in progress, and I'm excited to keep improving it!
 
   </p>
 
 ## Used in App:
 
 - Next.js 15;
+- NextAuth;
 - TypeScript;
 - Resend;
 - Tailwind;
@@ -26,13 +27,12 @@ This project is a work in progress, and I'm excited to keep improving it! 🚀�
 - Real data base;
 - next-intl;
 
-### `npm run dev`
+### `Get started`
 
-Runs the app in the development mode.\
+At the moment, it is not connected to the backend, but it will be soon. So now you can just go to second step.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- First, clone the backend repository and run it using Docker Compose:
+  https://github.com/rimapaulione/sharing-project-java
 
-Need to run API from https://github.com/rimapaulione/authJWT.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Second, clone and start the frontend project. The app will be available at:
+  🔗 http://localhost:3000
